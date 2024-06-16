@@ -1,3 +1,5 @@
+import tkinter as tk
+
 
 class Paddle():
     def __init__(self, xpos: int, state: str, player: int):
@@ -47,3 +49,34 @@ class Ball():
     def updateState(self, boardXpos: int, boardYpos: int):
         self.xpos = boardXpos
         self.ypos = boardYpos
+
+
+
+class pongGUI():
+    def __init__(self):
+         self.root = tk.Tk()
+         
+         self.label = tk.Label(self.root, text = 'Your message', font = ('Arial', 18))
+         self.label.pack(padx = 10, pady = 10)
+         
+         self.textbox = tk.Text(self.root, height = 5, font = ('Arial', 16))
+         self.textbox.pack(padx =10, pady =10)
+         
+         self.checkState = tk.IntVar()
+         
+         self.check = tk.Checkbutton(self.root, text = "Show Message Box", font = ('Arial', 16), variable = self.checkState)
+         self.check.pack(padx =10, pady =10)
+         
+         self.button = tk.Button(self.root, text = "Show Message", font = ('Arial', 18), command = self.showMessage)
+         self.button.pack(padx =10, pady =10)
+         
+         self.root.mainloop()
+
+    def showMessage(self):
+        #prints to the terminal
+        print("Hello World")
+
+
+
+
+pongGUI()
