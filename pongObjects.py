@@ -85,7 +85,12 @@ class pongGUI():
         # you can make a shorcut by reading the key key press information
         #print(event.keysym)
         #print(event.state)
-        if event.state == 9 and event.keysym == "Shift_L":
+        
+        #Mac shortcut Command + enter
+        if event.state == 12 and event.keysym == "Return":
+            self.showMessage()
+        #Windows ctrl + enter
+        if event.state == 8 and event.keysym == "Return":
             self.showMessage()
 
 
