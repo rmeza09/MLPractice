@@ -86,7 +86,7 @@ class pongGUI():
         #print(event.keysym)
         #print(event.state)
         if event.state == 9 and event.keysym == "Shift_L":
-            print("hello")
+            self.showMessage()
 
 
 
